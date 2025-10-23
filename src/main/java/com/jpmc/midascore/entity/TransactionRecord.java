@@ -23,10 +23,16 @@ public class TransactionRecord {
 
     public TransactionRecord() {}
 
-    public TransactionRecord(UserRecord sender, UserRecord recipient, float amount) {
+
+    // Incentive entity
+    public double incentive;
+
+
+    public TransactionRecord(UserRecord sender, UserRecord recipient, float amount, double incentive) {
         this.sender = sender;
         this.recipient = recipient;
         this.amount = amount;
+        this.incentive = incentive;
     }
 
     // Getters and setters
@@ -36,4 +42,6 @@ public class TransactionRecord {
     public UserRecord getSender() { return sender; }
     public UserRecord getRecipient() { return recipient; }
     public LocalDateTime getTimestamp() { return timestamp; }
+    public double getIncentive() { return incentive; }
+    public void setIncentive(double incentive) { this.incentive = incentive; }
 }
