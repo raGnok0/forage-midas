@@ -32,7 +32,11 @@ public class TaskThreeTests {
         }
         Thread.sleep(2000);
 
-
+        userPopulator.getUserRepository().findAll().forEach(u ->
+            System.out.println("👤 User: " + u.getName() + ", Balance: " + u.getBalance())
+        );
+        System.out.println("✅ Test execution complete. Now check logs or debugger.");
+        
         logger.info("----------------------------------------------------------");
         logger.info("----------------------------------------------------------");
         logger.info("----------------------------------------------------------");
